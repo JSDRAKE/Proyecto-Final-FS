@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const createRig = require('../controllers/createRigController')
+const createRigController = require('../controllers/createRigController')
 
-router.post('/', createRig)
+router.post('/', createRigController.createRig)
 
 module.exports = router
