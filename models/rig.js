@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose')
 
 const rigSchema = new Schema({
+
     brand: {
 
         type : String,
@@ -24,7 +25,7 @@ const rigSchema = new Schema({
 
     frecuencyRange : {
 
-        type : Number,
+        type : String,
         required: true
 
     },
@@ -45,13 +46,20 @@ const rigSchema = new Schema({
 
     manufactured : {
 
-        type : Date,
+        type : String,
         required: true
 
-    }
+    },
+
+    img : {
+
+        type : String,
+        required: true
+
+    },
 
 })
 
 const Rigs = model('Rig', rigSchema)
 
-module.exports = Rigs
+module.exports = { Rigs }
