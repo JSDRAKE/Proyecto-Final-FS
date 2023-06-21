@@ -2,6 +2,6 @@ const express = require('express')
 const router = express.Router()
 const getRigsController = require('../controllers/getRigsController')
 
-router.get('/', getRigsController.getRigs)
+router.get('/:model', getRigsController.getrigBymodel)
 
 module.exports = router
