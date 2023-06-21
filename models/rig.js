@@ -52,6 +52,6 @@ const rigSchema = new Schema({
 
 })
 
-const Rig = model('Rig', rigSchema)
+const Rigs = model('Rig', rigSchema)
 
-module.exports = Rig
+module.exports = Rigs
