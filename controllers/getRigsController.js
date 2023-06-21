@@ -22,7 +22,7 @@ const getRig = {
 
         try {
 
-            const model = await Rigs.findOne({ model: req.params.model })
+            const model = await Rigs.findOne({ model : req.params.model.toUpperCase() })
 
             res.status(200).json({ model })
 
