@@ -8,11 +8,11 @@ const getRig = {
 
             const rigs = await Rigs.find()
 
-            return res.status(200).json({ rigs })
+            res.status(200).json({ rigs })
 
         } catch (error) {
 
-            return res.status(400).send(error)
+            res.status(400).send(error)
 
         }
 
@@ -24,11 +24,11 @@ const getRig = {
 
             const model = await Rigs.findOne({ model: req.params.model })
 
-            return res.status(200).json({ model })
+            res.status(200).json({ model })
 
         } catch (error) {
 
-            return res.status(400).send(error)
+            res.status(400).send(error)
 
         }
 
@@ -40,11 +40,11 @@ const getRig = {
 
             const rigId = await Rigs.findById(req.params.id)
 
-            return res.status(200).json({ rigId })
+            res.status(200).json(rigId)
 
         } catch (error) {
 
-            return res.status(400).send(error)
+            res.status(400).send(error)
 
         }
 

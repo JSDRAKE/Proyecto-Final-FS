@@ -1,19 +1,23 @@
 const { Rigs } = require('../models/rig')
 
-const updateRig = async (req, res) => {
+const updateRigController = {
 
-    try {
+    async updateRig (req, res) {
 
-        await Rigs.findAndUpdate(req.params.id, req.body)
+        try {
 
-        res.status(200).json({ message: 'Rig updated' })
+            await Rigs.findByIdAndUpdate(req.params.id, req.body)
 
-    } catch (error) {
+            res.status(200).json({ message: 'Rig updated' })
 
-        return res.status(400).json({ error })
-        
+        } catch (error) {
+
+            return res.status(400).json(error)
+
+        }
+
     }
 
 }
 
-module.exports = updateRig
+module.exports = updateRigController

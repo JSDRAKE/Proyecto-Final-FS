@@ -1,21 +1,25 @@
 const { Rigs } = require('../models/rig')
 
-const createRig = async (req, res) => {
+const createRigController = {
 
-    try {
+    async createRig (req, res)  {
 
-        const rig = await Rigs.create(req.body)
-        
-        await rig.save()
+        try {
 
-        return res.status(201).json({rig})
+            const newRig = new Rigs(req.body)
 
-    } catch (error) {
+            await newRig.save()
 
-        return res.status(400).json({error})
+            res.status(201).json({ newRig })
+
+        } catch (error) {
+
+            res.status(400).json({ error })
+
+        }
 
     }
 
 }
 
-module.exports = createRig
+module.exports = createRigController
