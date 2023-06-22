@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const deleteRig = require('../controllers/deleteRigContoller')
+const deleteRigContoller = require('../controllers/deleteRigContoller')
+const { validateId } = require('../middlewares/validateId')
 
-router.delete('/:id', deleteRig)
+router.delete('/:id', validateId, deleteRigContoller.deleteRig)
 
 module.exports = router
