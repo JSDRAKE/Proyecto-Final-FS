@@ -1,6 +1,6 @@
 const { Rigs } = require('../models/rig');
 
-const getRig = {
+const getRigsController = {
 
     async getRigs(req, res) {
 
@@ -8,7 +8,7 @@ const getRig = {
 
             const rigs = await Rigs.find()
 
-            res.status(200).json({ rigs })
+            res.status(200).json(rigs)
 
         } catch (error) {
 
@@ -52,4 +52,4 @@ const getRig = {
 
 }
 
-module.exports = getRig
+module.exports = getRigsController 

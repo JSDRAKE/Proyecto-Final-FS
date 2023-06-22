@@ -16,4 +16,4 @@ const deleteRig = async (req, res) => {
 
 }
 
-module.exports = deleteRig
+module.exports = { deleteRig }

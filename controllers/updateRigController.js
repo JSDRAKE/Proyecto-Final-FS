@@ -8,7 +8,7 @@ const updateRigController = {
 
             await Rigs.findByIdAndUpdate(req.params.id, req.body)
 
-            res.status(200).json({ message: 'Rig updated' })
+            res.status(200).json({ msg: 'Rig updated' })
 
         } catch (error) {
 
