@@ -12,6 +12,7 @@ const getRigByModelRouter = require('./routes/getRigByModel')
 const createRigRouter = require('./routes/createRig')
 const updateRigRouter = require('./routes/updateRig')
 const deleteRigRouter = require('./routes/deleteRig')
+const apiExternaRouter = require('./routes/apiExterna')
 
 
 
@@ -28,6 +29,7 @@ app.use('/getRigByModel', getRigByModelRouter)
 app.use('/createRig', createRigRouter)
 app.use('/updateRig', updateRigRouter)
 app.use('/deleteRig', deleteRigRouter)
+app.use('/apiExterna', apiExternaRouter)
 
 
 connectDB()
